@@ -1,0 +1,155 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.5": {
+      "Castle.Core/4.3.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Configuration"
+        ],
+        "compile": {
+          "lib/net45/Castle.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Castle.Core.dll": {}
+        }
+      },
+      "FakeItEasy/6.2.1": {
+        "type": "package",
+        "dependencies": {
+          "Castle.Core": "4.3.1"
+        },
+        "compile": {
+          "lib/net45/FakeItEasy.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FakeItEasy.dll": {}
+        }
+      },
+      "tModLoader.CodeAssist/0.1.1": {
+        "type": "package"
+      }
+    }
+  },
+  "libraries": {
+    "Castle.Core/4.3.1": {
+      "sha512": "8Y/eTr6GTElAGV7eAmJuhfLhGdFpNvaNrQ9UQYDScziLmX+/BLGM+9eQr0IcdNDcPN0ADmbtwT6MgecGKy4obw==",
+      "type": "package",
+      "path": "castle.core/4.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ASL - Apache Software Foundation License.txt",
+        "CHANGELOG.md",
+        "LICENSE",
+        "castle.core.4.3.1.nupkg.sha512",
+        "castle.core.nuspec",
+        "lib/net35/Castle.Core.dll",
+        "lib/net35/Castle.Core.xml",
+        "lib/net40/Castle.Core.dll",
+        "lib/net40/Castle.Core.xml",
+        "lib/net45/Castle.Core.dll",
+        "lib/net45/Castle.Core.xml",
+        "lib/netstandard1.3/Castle.Core.dll",
+        "lib/netstandard1.3/Castle.Core.xml",
+        "lib/netstandard1.5/Castle.Core.dll",
+        "lib/netstandard1.5/Castle.Core.xml",
+        "readme.txt"
+      ]
+    },
+    "FakeItEasy/6.2.1": {
+      "sha512": "P59iQmxR4Ms9kizyWUQ39i7PASmecjogdEGB/5MO/kZhj48bytSrJ1NAnbWJolpXMA5nOOadXRypWi62kkyfaQ==",
+      "type": "package",
+      "path": "fakeiteasy/6.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fakeiteasy.6.2.1.nupkg.sha512",
+        "fakeiteasy.nuspec",
+        "images/FakeItEasy.png",
+        "lib/net40/FakeItEasy.dll",
+        "lib/net40/FakeItEasy.xml",
+        "lib/net45/FakeItEasy.dll",
+        "lib/net45/FakeItEasy.xml",
+        "lib/netstandard1.6/FakeItEasy.dll",
+        "lib/netstandard1.6/FakeItEasy.xml",
+        "lib/netstandard2.0/FakeItEasy.dll",
+        "lib/netstandard2.0/FakeItEasy.xml",
+        "lib/netstandard2.1/FakeItEasy.dll",
+        "lib/netstandard2.1/FakeItEasy.xml"
+      ]
+    },
+    "tModLoader.CodeAssist/0.1.1": {
+      "sha512": "bUQ4HAiRYq8Zisms7FI9ffSf4nZHwFFZU5j8Hpc/9rFB16GOGJg2ulHV0ZDErzoAAbXBeRdO8/VbSltBwmDcpA==",
+      "type": "package",
+      "path": "tmodloader.codeassist/0.1.1",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "NugetIcon.png",
+        "analyzers/dotnet/cs/tModLoader.CodeAssist.dll",
+        "tmodloader.codeassist.0.1.1.nupkg.sha512",
+        "tmodloader.codeassist.nuspec",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.5": [
+      "FakeItEasy >= 6.2.1",
+      "tModLoader.CodeAssist >= 0.1.*"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Luan Paul\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Luan Paul\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\WeaponAspects\\WeaponAspects.csproj",
+      "projectName": "WeaponAspects",
+      "projectPath": "C:\\Users\\Luan Paul\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\WeaponAspects\\WeaponAspects.csproj",
+      "packagesPath": "C:\\Users\\Luan Paul\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Luan Paul\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\WeaponAspects\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Luan Paul\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net45"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net45": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net45": {
+        "dependencies": {
+          "FakeItEasy": {
+            "target": "Package",
+            "version": "[6.2.1, )"
+          },
+          "tModLoader.CodeAssist": {
+            "target": "Package",
+            "version": "[0.1.*, )"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
