@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-//using WeaponAspects.Projectiles;
+using WeaponAspects.Projectiles;
 
 namespace WeaponAspects.Weapons
 {
@@ -23,8 +23,10 @@ namespace WeaponAspects.Weapons
 			item.damage = 17;
 			item.useAnimation = 20;
 			item.useTime = 55;
+
 			item.width = 30;
 			item.height = 30;
+			//The actual sprite size is 34x40 but in vanilla code this is the size
 			item.shoot = ProjectileID.IceBolt;
 			item.shootSpeed = 9.5f;
 			item.knockBack = 4.75f;
@@ -33,7 +35,7 @@ namespace WeaponAspects.Weapons
 		}
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
-			//Projectile.NewProjectile(player.position, new Vector2(10, 10), ModContent.ProjectileType<PermafrostBlizzard>(), 5, 0, player.whoAmI);
+			Projectile.NewProjectile(player.position, new Vector2(10, 10), ModContent.ProjectileType<PermafrostBlizzard>(), 5, 0, player.whoAmI);
 			return true;
 		}
 	}

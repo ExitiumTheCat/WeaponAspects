@@ -129,6 +129,7 @@ namespace WeaponAspects.UI
 					{
 						Text3.SetText("Aspect of Icicles\nYou can throw the blade with Right-Click, although swinging it no longer shoots icy bolts.");
 						UnlockedAspect[2] = true;
+						WeaponType[2] = ModContent.ItemType<IceBladeIcicles>();
 					}
 					else
 						Text3.SetText("Aspect of ???");
