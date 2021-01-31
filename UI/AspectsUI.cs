@@ -146,6 +146,19 @@ namespace WeaponAspects.UI
 					else
 						Text4.SetText("Aspect of ???");
 					break;
+				case ("Gold Broadsword"):
+					Text1.SetText("Aspect of Gold");
+					WeaponType[0] = 3520;
+					UnlockedAspect[0] = true;
+					if (aspectsPlayer.GoldBroadsword[1] == 1)
+					{
+						Text3.SetText("Aspect of Midas\nYour attacks inflict the debuff Midas on hit.");
+						UnlockedAspect[2] = true;
+						WeaponType[2] = ModContent.ItemType<GoldBroadswordMidas>();
+					}
+					else
+						Text3.SetText("Aspect of ???");
+					break;
 			}
 		}
 		private void OnPanel1(UIMouseEvent evt, UIElement listeningElement)

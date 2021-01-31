@@ -8,20 +8,11 @@ namespace WeaponAspects
     {
         public int WHichAspectToUnlock;
         public int[] IceBlade = new int[3];
+        public int[] GoldBroadsword = new int[3];
 
         public override void OnHitAnything(float x, float y, Entity victim)
         {
-            if (IceBlade[0] == 0)
-            {
-                IceBlade[0] = 1;
-                IceBlade[1] = 1;
-            }
-            else
-            {
-                IceBlade[0] = 0;
-                IceBlade[1] = 1;
-            }
-            if (Main.rand.NextFloat() < .01f)
+            if (Main.rand.NextFloat() < .50f)
             {
                 WHichAspectToUnlock = Main.rand.Next(0, 3);
                 switch (player.HeldItem.Name) {
@@ -32,6 +23,13 @@ namespace WeaponAspects
                             //Do Stuff
                         }
                         break;
+                    case ("Gold Broadsword"):
+                        if (GoldBroadsword[WHichAspectToUnlock] == 0)
+                        {
+                            GoldBroadsword[WHichAspectToUnlock] = 1;
+                            //Do Stuff
+                        }
+                        break;
                 }
             }
         }
@@ -39,13 +37,16 @@ namespace WeaponAspects
         {
             return new TagCompound {
         {"IceBlade", IceBlade},
+        {"GoldBroadsword", GoldBroadsword},
     };
         }
 
         public override void Load(TagCompound tag)
         {
-            if (tag.ContainsKey("IceBlade"))
-                IceBlade = tag.GetIntArray("IceBlade");
+            if (tag.ContainsKey("GoldBroadsword"))
+                GoldBroadsword = tag.GetIntArray("GoldBroadsword");
+            if (tag.ContainsKey("GoldBroadsword"))
+                GoldBroadsword = tag.GetIntArray("GoldBroadsword");
         }
     }
   }
