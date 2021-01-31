@@ -112,6 +112,10 @@ namespace WeaponAspects.UI
 			UnlockedAspect[1] = false;
 			UnlockedAspect[2] = false;
 			UnlockedAspect[3] = false;
+			Text1.SetText("Not implemented.");
+			Text2.SetText("Not implemented.");
+			Text3.SetText("Not implemented.");
+			Text4.SetText("Not implemented.");
 			switch (Main.LocalPlayer.HeldItem.Name) {
 				case ("Ice Blade"):
 					Text1.SetText("Aspect of Ice");
@@ -125,18 +129,19 @@ namespace WeaponAspects.UI
 					}
 					else
 						Text2.SetText("Aspect of ???");
+					/*
 					if (aspectsPlayer.IceBlade[1] == 1)
 					{
-						Text3.SetText("Aspect of Icicles\nYou can throw the blade with Right-Click, although swinging it no longer shoots icy bolts.");
-						UnlockedAspect[2] = true;
-						WeaponType[2] = ModContent.ItemType<IceBladeIcicles>();
+						Text3.SetText("Aspect of ???");
 					}
 					else
 						Text3.SetText("Aspect of ???");
+						*/
 					if (aspectsPlayer.IceBlade[2] == 1)
 					{
-						Text4.SetText("Aspect of ???");
+						Text4.SetText("Aspect of Icicles\nYou can throw the blade with Right-Click, although swinging it no longer shoots icy bolts.");
 						UnlockedAspect[3] = true;
+						WeaponType[3] = ModContent.ItemType<IceBladeIcicles>();
 					}
 					else
 						Text4.SetText("Aspect of ???");
