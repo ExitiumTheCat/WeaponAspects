@@ -1,0 +1,6 @@
+-The Rotted Fork (Sangue)
+   -Dust
+   -Right Click
+
+-Ice Blade (Icicles)
+   -Sound Effect
